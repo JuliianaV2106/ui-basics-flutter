@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/statistics_row.dart';
+import 'widgets/profile_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +13,10 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: StatisticsRow(),
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: ProfileCard(),
+          ),
         ),
       ),
     );
