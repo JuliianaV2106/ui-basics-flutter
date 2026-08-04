@@ -1,46 +1,47 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-  final String label;
+
   final String hint;
-  final bool obscureText;
-  final IconData prefixIcon;
+  final IconData icon;
+  final bool obscure;
 
   const CustomTextField({
     super.key,
-    required this.label,
     required this.hint,
-    required this.prefixIcon,
-    this.obscureText = false,
+    required this.icon,
+    this.obscure = false,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+    return TextField(
 
-        Text(
-          label,
-          style: const TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 16,
-          ),
+      obscureText: obscure,
+
+      decoration: InputDecoration(
+
+        hintText: hint,
+
+        prefixIcon: Icon(icon),
+
+        filled: true,
+
+        fillColor: const Color(0xffF5F7FA),
+
+        contentPadding: const EdgeInsets.symmetric(
+          vertical: 18,
         ),
 
-        const SizedBox(height: 8),
+        border: OutlineInputBorder(
 
-        TextField(
-          obscureText: obscureText,
-          decoration: InputDecoration(
-            hintText: hint,
-            prefixIcon: Icon(prefixIcon),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
+          borderRadius: BorderRadius.circular(15),
+
+          borderSide: BorderSide.none,
+
         ),
-      ],
+
+      ),
     );
   }
 }
