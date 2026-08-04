@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'widgets/conversation_item.dart';
+import 'widgets/statistics_row.dart';
 
 void main() {
-  runApp(
-    const MyApp(),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,23 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: ConversationItem(
-              image: "assets/images/javier.jpg",
-              name: "Javier Montes",
-              message: "¿Te parece si revisamos los diseños?",
-              time: "10:24 a.m.",
-              status: const Icon(
-                Icons.done_all,
-                color: Colors.indigo,
-              ),
-            ),
-          ),
+        body: Center(
+          child: StatisticsRow(),
         ),
       ),
     );
