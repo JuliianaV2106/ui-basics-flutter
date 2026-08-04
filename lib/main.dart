@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/profile_card.dart';
+import 'widgets/conversations_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
-            child: ProfileCard(),
+            padding: EdgeInsets.all(20),
+            child: ConversationsList(),
           ),
         ),
       ),
