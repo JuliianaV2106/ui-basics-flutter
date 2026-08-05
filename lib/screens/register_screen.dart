@@ -25,13 +25,17 @@ class RegisterScreen extends StatelessWidget {
               const SizedBox(height: 30),
 
               Center(
-                child: Image.asset(
-                  "assets/images/register.png",
-                  height: 180,
-                  errorBuilder: (_, __, ___) => const Icon(
-                    Icons.person_add_alt_1,
-                    size: 120,
+                child: Container(
+                  width: 110,
+                  height: 110,
+                  decoration: const BoxDecoration(
+                    color: AppColors.secondary,
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.person_add,
                     color: AppColors.primary,
+                    size: 55,
                   ),
                 ),
               ),

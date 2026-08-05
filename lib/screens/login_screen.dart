@@ -27,21 +27,31 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 40),
 
                 Center(
-                  child: Image.asset(
-                    "assets/images/login.png",
-                    height: 220,
+                  child: Container(
+                    width: 110,
+                    height: 110,
+                    decoration: const BoxDecoration(
+                      color: AppColors.secondary,
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.favorite,
+                      color: AppColors.primary,
+                      size: 55,
+                    ),
                   ),
                 ),
 
                 const SizedBox(height: 40),
 
                 const Text(
-                  "Welcome Back",
-                  style: TextStyle(
-                    fontSize: 34,
-                    fontWeight: FontWeight.bold,
-                  ),
+                "Welcome Back",
+                style: TextStyle(
+                  fontSize: 34,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.text,
                 ),
+              ),
 
                 const SizedBox(height: 10),
 
